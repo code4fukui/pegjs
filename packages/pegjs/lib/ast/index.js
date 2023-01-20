@@ -1,5 +1,5 @@
-"use strict";
+import * as visitor from "./visitor.js";
+import { Node } from "./Node.js";
+import { Grammar } from "./Grammar.js";
 
-exports.visitor = require( "./visitor" );
-exports.Node = require( "./Node" );
-exports.Grammar = require( "./Grammar" );
+export { visitor, Node, Grammar };

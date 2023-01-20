@@ -1,21 +1,19 @@
-"use strict";
+import { calcReportFailures } from "./passes/calc-report-failures.js";
+import { generateBytecode } from "./passes/generate-bytecode.js";
+import { generateJS } from "./passes/generate-js.js";
+import { removeProxyRules } from "./passes/remove-proxy-rules.js";
+import { reportDuplicateLabels } from "./passes/report-duplicate-labels.js";
+import { reportDuplicateRules } from "./passes/report-duplicate-rules.js";
+import { reportUnusedRules } from "./passes/report-unused-rules.js";
+import { reportInfiniteRecursion } from "./passes/report-infinite-recursion.js";
+import { reportInfiniteRepetition } from "./passes/report-infinite-repetition.js";
+import { reportUndefinedRules } from "./passes/report-undefined-rules.js";
+import { inferenceMatchResult } from "./passes/inference-match-result.js";
+import { reportIncorrectPlucking } from "./passes/report-incorrect-plucking.js";
+import { Session } from "./session.js";
+import util from "../util/index.js";
 
-const calcReportFailures = require( "./passes/calc-report-failures" );
-const generateBytecode = require( "./passes/generate-bytecode" );
-const generateJS = require( "./passes/generate-js" );
-const removeProxyRules = require( "./passes/remove-proxy-rules" );
-const reportDuplicateLabels = require( "./passes/report-duplicate-labels" );
-const reportDuplicateRules = require( "./passes/report-duplicate-rules" );
-const reportUnusedRules = require( "./passes/report-unused-rules" );
-const reportInfiniteRecursion = require( "./passes/report-infinite-recursion" );
-const reportInfiniteRepetition = require( "./passes/report-infinite-repetition" );
-const reportUndefinedRules = require( "./passes/report-undefined-rules" );
-const inferenceMatchResult = require( "./passes/inference-match-result" );
-const reportIncorrectPlucking = require( "./passes/report-incorrect-plucking" );
-const Session = require( "./session" );
-const util = require( "../util" );
-
-const compiler = {
+export const compiler = {
 
     Session: Session,
 
@@ -94,5 +92,3 @@ const compiler = {
     },
 
 };
-
-module.exports = compiler;

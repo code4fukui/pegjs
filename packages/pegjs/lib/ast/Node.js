@@ -1,6 +1,4 @@
-"use strict";
-
-class Node {
+export class Node {
 
     constructor( type, location ) {
 
@@ -10,5 +8,3 @@ class Node {
     }
 
 }
-
-module.exports = Node;

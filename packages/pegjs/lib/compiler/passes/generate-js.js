@@ -1,12 +1,11 @@
 /* eslint no-mixed-operators: 0, prefer-const: 0 */
 
-"use strict";
-
-const util = require( "../../util" );
-const VERSION = require( "../../../package.json" ).version;
+import util from "../../util/index.js";
+import pkg from "../../../package.json" assert { type: "json" };
+const VERSION = pkg.version;
 
 // Generates parser JavaScript code.
-function generateJS( ast, session, options ) {
+export function generateJS( ast, session, options ) {
 
     const op = session.opcodes;
 
@@ -1875,5 +1874,3 @@ function generateJS( ast, session, options ) {
     ast.code = generateWrapper( generateToplevel() );
 
 }
-
-module.exports = generateJS;

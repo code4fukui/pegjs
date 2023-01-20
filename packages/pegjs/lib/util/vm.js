@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * `eval` the given source as a CommonJS module, using properties found in `context` as top-level variables.
  * 
@@ -22,4 +20,4 @@ function evalModule( source, context ) {
 
 // Exports
 
-module.exports = { evalModule };
+export default { evalModule };

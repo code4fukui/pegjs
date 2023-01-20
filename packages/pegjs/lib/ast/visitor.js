@@ -1,9 +1,7 @@
-"use strict";
-
-const util = require( "../util" );
+import util from "../util/index.js";
 
 // Abstract syntax tree visitor for PEG.js
-class ASTVisitor {
+export class ASTVisitor {
 
     // Will traverse the node, strictly assuming the visitor can handle the node type.
     visit( node ) {
@@ -22,21 +20,15 @@ class ASTVisitor {
 
 }
 
-module.exports = {
-
-    ASTVisitor,
-
     // Simple AST node visitor builder for PEG.js
-    build( functions ) {
+export const build = ( functions ) => {
 
         let visitor = new ASTVisitor();
         util.extend( visitor, functions );
         visitor = util.enforceFastProperties( visitor );
         return visitor.visit.bind( visitor );
 
-    },
-
-};
+    };
 
 // Helper's to create visitor's for use with the ASTVisitor class
 const on = ASTVisitor.on = {

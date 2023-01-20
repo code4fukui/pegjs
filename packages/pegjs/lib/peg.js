@@ -1,15 +1,15 @@
-"use strict";
+import { GrammarError } from "./grammar-error.js";
+import * as ast from "./ast/index.js";
+import { compiler } from  "./compiler/index.js";
+import * as parser from "./parser.js";
+import util from "./util/index.js";
+import pkg from "../package.json" assert { type: "json" };
+const VERSION = pkg.version;
 
-const GrammarError = require( "./grammar-error" );
-const ast = require( "./ast" );
-const compiler = require( "./compiler" );
-const parser = require( "./parser" );
-const util = require( "./util" );
-
-const peg = {
+export const peg = {
     // PEG.js version (uses semantic versioning).
-    VERSION: require( "../package.json" ).version,
-
+    VERSION,
+    
     GrammarError: GrammarError,
     ast: ast,
     parser: parser,
@@ -49,5 +49,3 @@ const peg = {
 
     },
 };
-
-module.exports = peg;

@@ -1,9 +1,8 @@
-"use strict";
 
 // Determines if rule always used in disabled report failure context,
 // that means, that any failures, reported within it, are never will be
 // visible, so the no need to report it.
-function calcReportFailures( ast, session, options ) {
+export function calcReportFailures( ast, session, options ) {
 
     // By default, not report failures for rules...
     ast.rules.forEach( rule => {
@@ -61,5 +60,3 @@ function calcReportFailures( ast, session, options ) {
     }
 
 }
-
-module.exports = calcReportFailures;

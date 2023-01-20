@@ -1,5 +1,3 @@
-"use strict";
-
 function hex( ch ) {
 
     return ch.charCodeAt( 0 ).toString( 16 ).toUpperCase();
@@ -122,4 +120,4 @@ const js = {
 
 };
 
-module.exports = js;
+export default js;

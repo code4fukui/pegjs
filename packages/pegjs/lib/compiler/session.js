@@ -1,11 +1,8 @@
-"use strict";
-
-const ast = require( "../ast" );
-const GrammarError = require( "../grammar-error" );
-const opcodes = require( "./opcodes" );
-const parser = require( "../parser" );
-const util = require( "../util" );
-const vm = require( "../util/vm" );
+import * as ast from "../ast/index.js";
+import { GrammarError } from "../grammar-error.js";
+import { opcodes } from "./opcodes.js";
+import * as parser from "../parser.js";
+import vm from "../util/vm.js";
 
 function fatal( message, location ) {
 
@@ -17,7 +14,7 @@ function fatal( message, location ) {
 
 }
 
-class Session {
+export class Session {
 
     constructor( config = {} ) {
 
@@ -55,5 +52,3 @@ class Session {
     }
 
 }
-
-module.exports = Session;

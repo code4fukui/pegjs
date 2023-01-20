@@ -1,9 +1,7 @@
-"use strict";
-
 const __hasOwnProperty = Object.prototype.hasOwnProperty;
 
 // Checks that each rule is defined only once.
-function reportDuplicateRules( ast, session ) {
+export function reportDuplicateRules( ast, session ) {
 
     const rules = {};
 
@@ -31,5 +29,3 @@ function reportDuplicateRules( ast, session ) {
     check( ast );
 
 }
-
-module.exports = reportDuplicateRules;

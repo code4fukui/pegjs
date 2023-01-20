@@ -1,7 +1,5 @@
-"use strict";
-
 // Checks that all rules are used.
-function reportUnusedRules( ast, session, options ) {
+export function reportUnusedRules( ast, session, options ) {
 
     const used = {};
     function yes( node ) {
@@ -27,5 +25,3 @@ function reportUnusedRules( ast, session, options ) {
     } );
 
 }
-
-module.exports = reportUnusedRules;

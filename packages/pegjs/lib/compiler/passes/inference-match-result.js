@@ -1,10 +1,8 @@
-"use strict";
-
 // Inference match result of the rule. Can be:
 //   -1: negative result, always fails
 //    0: neutral result, may be fail, may be match
 //    1: positive result, always match
-function inferenceMatchResult( ast, session ) {
+export function inferenceMatchResult( ast, session ) {
 
     let inference;
     function sometimesMatch( node ) {
@@ -165,5 +163,3 @@ function inferenceMatchResult( ast, session ) {
     inference( ast );
 
 }
-
-module.exports = inferenceMatchResult;

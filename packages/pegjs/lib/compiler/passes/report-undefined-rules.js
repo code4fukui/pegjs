@@ -1,7 +1,5 @@
-"use strict";
-
 // Checks that all referenced rules exist.
-function reportUndefinedRules( ast, session, options ) {
+export function reportUndefinedRules( ast, session, options ) {
 
     const check = session.buildVisitor( {
         rule_ref( node ) {
@@ -31,5 +29,3 @@ function reportUndefinedRules( ast, session, options ) {
     } );
 
 }
-
-module.exports = reportUndefinedRules;

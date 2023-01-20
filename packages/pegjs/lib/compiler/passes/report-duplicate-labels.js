@@ -1,10 +1,10 @@
-"use strict";
 
-const util = require( "../../util" );
+import util from "../../util/index.js";
+
 const __hasOwnProperty = Object.prototype.hasOwnProperty;
 
 // Checks that each label is defined only once within each scope.
-function reportDuplicateLabels( ast, session ) {
+export function reportDuplicateLabels( ast, session ) {
 
     let check;
 
@@ -66,5 +66,3 @@ function reportDuplicateLabels( ast, session ) {
     check( ast );
 
 }
-
-module.exports = reportDuplicateLabels;

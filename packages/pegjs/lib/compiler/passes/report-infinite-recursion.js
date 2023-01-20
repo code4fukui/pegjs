@@ -1,5 +1,3 @@
-"use strict";
-
 // Reports left recursion in the grammar, which prevents infinite recursion in
 // the generated parser.
 //
@@ -10,7 +8,7 @@
 //
 // In general, if a rule reference can be reached without consuming any input,
 // it can lead to left recursion.
-function reportInfiniteRecursion( ast, session ) {
+export function reportInfiniteRecursion( ast, session ) {
 
     const visitedRules = [];
 
@@ -57,5 +55,3 @@ function reportInfiniteRecursion( ast, session ) {
     check( ast );
 
 }
-
-module.exports = reportInfiniteRecursion;

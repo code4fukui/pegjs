@@ -2,10 +2,8 @@
 
 /* eslint-disable */
 
-"use strict";
-
-var ast = require("./ast");
-var util = require("./util");
+import * as ast from "./ast/index.js";
+import util from "./util/index.js";
 
 function peg$subclass(child, parent) {
   function C() { this.constructor = child; }
@@ -3469,7 +3467,5 @@ function peg$parse(input, options) {
   }
 }
 
-module.exports = {
-  SyntaxError: peg$SyntaxError,
-  parse: peg$parse
-};
+export const SyntaxError = peg$SyntaxError;
+export const parse = peg$parse;

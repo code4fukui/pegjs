@@ -1,7 +1,5 @@
-"use strict";
-
 // Bytecode instruction opcodes.
-const opcodes = {
+export const opcodes = {
 
     // Stack Manipulation
 
@@ -56,5 +54,3 @@ const opcodes = {
     EXPECT_NS_END:     39,    // EXPECT_NS_END invert
 
 };
-
-module.exports = opcodes;

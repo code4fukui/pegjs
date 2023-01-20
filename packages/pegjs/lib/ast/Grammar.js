@@ -1,10 +1,8 @@
-"use strict";
+import { Node } from "./Node.js";
+import * as visitor from "./visitor.js";
+import util from "../util/index.js";
 
-const Node = require( "./Node" );
-const visitor = require( "./visitor" );
-const util = require( "../util" );
-
-class Grammar extends Node {
+export class Grammar extends Node {
 
     // Creates a new AST
     constructor( initializer, rules, comments, location ) {
@@ -39,8 +37,6 @@ class Grammar extends Node {
     }
 
 }
-
-module.exports = Grammar;
 
 /* ***************************** @private ***************************** */
 

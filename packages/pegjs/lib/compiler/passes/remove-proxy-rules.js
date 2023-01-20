@@ -1,7 +1,5 @@
-"use strict";
-
 // Removes proxy rules -- that is, rules that only delegate to other rule.
-function removeProxyRules( ast, session, options ) {
+export function removeProxyRules( ast, session, options ) {
 
     function isProxyRule( node ) {
 
@@ -38,5 +36,3 @@ function removeProxyRules( ast, session, options ) {
     ast.rules = rules;
 
 }
-
-module.exports = removeProxyRules;

@@ -1,8 +1,6 @@
-"use strict";
-
 // Reports expressions that don't consume any input inside |*| or |+| in the
 // grammar, which prevents infinite loops in the generated parser.
-function reportInfiniteRepetition( ast, session ) {
+export function reportInfiniteRepetition( ast, session ) {
 
     const check = session.buildVisitor( {
         zero_or_more( node ) {
@@ -35,5 +33,3 @@ function reportInfiniteRepetition( ast, session ) {
     check( ast );
 
 }
-
-module.exports = reportInfiniteRepetition;

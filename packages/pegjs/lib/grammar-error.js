@@ -1,7 +1,5 @@
-"use strict";
-
 // Thrown when the grammar contains an error.
-class GrammarError {
+export class GrammarError {
 
     constructor( message, location ) {
 
@@ -18,5 +16,3 @@ class GrammarError {
     }
 
 }
-
-module.exports = GrammarError;

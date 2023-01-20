@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * The `findIndex()` method returns the index of the first element in the array that satisfies the
  * provided testing function, otherwise `-1` is returned.
@@ -30,4 +28,4 @@ function find( array, condition ) {
 
 // Exports
 
-module.exports = { findIndex, find };
+export { findIndex, find };

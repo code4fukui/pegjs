@@ -1,9 +1,7 @@
-"use strict";
-
-const arrays = require( "./arrays" );
-const js = require( "./js" );
-const objects = require( "./objects" );
-const vm = require( "./vm" );
+import * as arrays from "./arrays.js";
+import js from "./js.js";
+import objects from "./objects.js";
+import vm from "./vm.js";
 
 /**
  * ```ts
@@ -50,7 +48,7 @@ function processOptions( options, defaults ) {
 
 }
 
-module.exports = {
+export default {
 
     find: arrays.find,
     findIndex: arrays.findIndex,

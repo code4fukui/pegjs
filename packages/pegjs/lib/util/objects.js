@@ -1,5 +1,3 @@
-"use strict";
-
 const __hasOwnProperty = Object.prototype.hasOwnProperty;
 
 const objects = {
@@ -119,4 +117,4 @@ const objects = {
 
 };
 
-module.exports = objects;
+export default objects;

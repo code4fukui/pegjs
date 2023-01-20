@@ -1,5 +1,3 @@
-"use strict";
-
 //
 // Check if the given element's expression is of type `semantic_*`
 //
@@ -20,7 +18,7 @@ function isSemanticPredicate( element ) {
 //   - plucking can not be done with an action block
 //   - cannot pluck a semantic predicate
 //
-function reportIncorrectPlucking( ast, session ) {
+export function reportIncorrectPlucking( ast, session ) {
 
     session.buildVisitor( {
 
@@ -49,5 +47,3 @@ function reportIncorrectPlucking( ast, session ) {
     } )( ast );
 
 }
-
-module.exports = reportIncorrectPlucking;

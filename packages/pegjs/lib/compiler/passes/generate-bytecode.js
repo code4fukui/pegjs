@@ -1,6 +1,4 @@
-"use strict";
-
-const util = require( "../../util" );
+import util from "../../util/index.js";
 
 // Generates bytecode.
 //
@@ -197,7 +195,7 @@ const util = require( "../../util" );
 //          }
 //          expected.top().variants.pushAll(value.variants);
 //        }
-function generateBytecode( ast, session ) {
+export function generateBytecode( ast, session ) {
 
     const op = session.opcodes;
 
@@ -750,5 +748,3 @@ function generateBytecode( ast, session ) {
     generate( ast );
 
 }
-
-module.exports = generateBytecode;
