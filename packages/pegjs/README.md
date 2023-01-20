@@ -15,6 +15,17 @@ PEG.js is a simple parser generator for JavaScript that produces fast parsers wi
   * Based on [parsing expression grammar](http://en.wikipedia.org/wiki/Parsing_expression_grammar) formalism - more powerful than traditional LL(*k*) and LR(*k*) parsers
   * Usable [from your browser](https://pegjs.org/online), from the command line, or via JavaScript API
 
+## usage
+
+```JavaScript
+import { peg } from "https://code4fukui.github.io/pegjs/packages/pegjs/lib/peg.js";
+
+const input = `integer "integer" = digits:[0-9]+ { return parseInt(digits.join(""), 10); }`;
+const parser = peg.generate(input);
+const res = parser.parse("123");
+console.log(res);
+```
+
 ## documentation
 
 - [Getting Started](https://github.com/pegjs/pegjs/blob/master/docs/guides/getting-started.md)
